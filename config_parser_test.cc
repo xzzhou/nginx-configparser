@@ -39,7 +39,10 @@ TEST_F(NginxStringConfigTest, SimpleConfig) {
 	    << "Good config was not parsed correctly.";
 	EXPECT_TRUE(ParseString("foo{ha{bar;}}"))
 	    << "Good config was not parsed correctly.";
+	EXPECT_TRUE(ParseString("foo{ha{ha{bar;}}}"))
+	    << "Good config was not parsed correctly.";
 };
+
 
 
 
